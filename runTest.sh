@@ -1,0 +1,1 @@
+newman run postman_collections/Employee_collection.postman_collection.json -d data files/EMP_DATA.csv -e env files/qa.EMP_postman_environment.json
