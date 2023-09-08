@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "7ad8aa7f-8e6e-4e02-84d0-247dac75e6a9",
+		"name": "Employee_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4496366",
+		"_collection_link": "https://red-meadow-4749.postman.co/workspace/Tech-Challenges~9db6ca60-2476-4aad-8180-ad9bed08029e/collection/4496366-7ad8aa7f-8e6e-4e02-84d0-247dac75e6a9?action=share&creator=4496366&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "all emp data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"TC1: If all employee data is succesfully fetched, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"/*pm.test(\"TC2: emp Id in response is a Number with value greater than 0, else error “Incorrect EMP ID, please enter a number with value greater than 0, should be given\", function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC3: emp name in response is non-empty String, else error Incorrect EMP Name, please enter a non-empty string without any numbers or special characters” should be given\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"employee_name\");",
+							"     let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    if (typeof jsonData.employee_name == \"string\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.employee_name.length > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC4: emp Salary in response is a Number in the range 85600-725000 else error “Incorrect EMP Salary, please enter a number in the 85600 -72500 inclusive of 85600 and 72500” should be given\" , function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC5: emp age in response is a Number in the range 19-66, else error “Incorrect Emp Age, please enter a number in the range 19-66 inclusive of 19 and 66” should be given\", function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC6: Profile Image in response is an empty string, else error, “Incorrect Image, please just add empty quotes(““)” should be thrown\", ",
+							"function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC7: body in response is non-empty String\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"data\");",
+							"     let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    if (typeof jsonData.body == \"string\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.body.length > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"}); ",
+							"/*pm.test(\"TC2:If emp id is in the range 1 & 24 inclusive of 1 & 24, then TC is passed\", function () {",
+							"    let testResult = false;",
+							"    var jsonData = pm.response.json();",
+							"    for (i=0; i<=jsonData.length;i++) {",
+							"    if ((jsonData.data[i].id >= '1' || jsonData.data[i].id <= '24')) {",
+							"    ",
+							"        i++",
+							"    }",
+							"    }",
+							"",
+							"",
+							"if (jsonData.data[i].id )",
+							"",
+							"  testResult= true;",
+							"    console.log(\"id is :\" +jsonData.data[i].id);",
+							"    console.log(\"testresult is:\" +testResult);",
+							"    pm.expect(testResult).to.eql(true);",
+							"}); */",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n"
+				},
+				"url": {
+					"raw": "{{host1}}/v1/employees?accept=application/jason",
+					"host": [
+						"{{host1}}"
+					],
+					"path": [
+						"v1",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "accept",
+							"value": "application/jason"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single emp data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TC1: If required employee data is succesfully fectched, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"/*",
+							"pm.test(\"TC2:If data is not null then TC is passed\", function () {",
+							"    let testResult = false;",
+							"    var jsonData = pm.response.json();",
+							"",
+							"    if (jsonData.data != null) {",
+							"        testResult= true;",
+							"    }",
+							"    pm.expect(testResult).to.eql(true);",
+							"});",
+							"pm.test(\"TC3:If correct message is received, then TC is passed\", function () {",
+							"    let testResult = false;",
+							"    var jsonData = pm.response.json();",
+							"",
+							"    if (jsonData.message == \"Successfully! Record has been fetched.\") {",
+							"        testResult= true;",
+							"    }",
+							"    pm.expect(testResult).to.eql(true);",
+							"});",
+							"",
+							"/*pm.test(\"TC4: id in response is same as passed in the URL \", function () {",
+							"    var jsonData = pm.response.json();",
+							"    //console.log(pm.globals.get(\"postId\"));",
+							"    pm.expect(jsonData.id).to.eql(pm.globals.get(\"?????\"));",
+							"});",
+							"",
+							"pm.test(\"TC5: emp Salary in response is a Number which matches the employee salary of the corresponding emp id else error “EMP Salary doesn't belong to the emp id entered by the user,  should be given\" , function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC6: emp age in response is a Number which matches the employee age of the corresponding emp id else",
+							"error “EMP age doesn't belong to the emp id entered by the user\" should be given should be given\", function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"TC7: Profile Image in response is an empty string, else error, “Incorrect Image, please just add empty quotes(““), should be thrown\", ",
+							"function () {",
+							" ",
+							"      let testPassCriteria1 = false;",
+							"      let testPassCriteria2 = false;",
+							"    var jsonData = pm.response.json();",
+							"    for(i=0; i<jsonData.length; i++) ",
+							"    {",
+							"    if (typeof jsonData.data[i].id == \"number\"){",
+							"        testPassCriteria1 = true;",
+							"    }",
+							"       if (jsonData.data[i].id > 0){",
+							"        testPassCriteria2= true;",
+							"    }",
+							"    }",
+							"    console.log(\"id is :\"+jsonData.data[i].id);",
+							"    console.log(\"cri1:\",+testPassCriteria1);",
+							"    console.log(\"cri2:\",+testPassCriteria2);",
+							"    let finalResult = testPassCriteria1 && testPassCriteria2;",
+							"    pm.expect(finalResult).to.eql(true);",
+							"});*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host1}}/v1/employee/20",
+					"host": [
+						"{{host1}}"
+					],
+					"path": [
+						"v1",
+						"employee",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TC1: If new emp record is successfully created, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"/*pm.test(\"TC2: If new emp record has emp id with a value greater than 0, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"TC3: If new emp name is non-empty String, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"TC4: If new emp Salary is a Number in the range 85600-725000 , TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"TC5: If new emp age is a Number in the range 19-66 , TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"TC6: If new Profile Image in response is an empty string, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"}); */",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"g_status\",data.STATUS);",
+							"pm.globals.set(\"g_name\",data.NAME);",
+							"pm.globals.set(\"g_salary\",data.SALARY);",
+							"pm.globals.set(\"g_age\",data.AGE);",
+							"pm.globals.set(\"g_id\",data.ID);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"{{g_status}}\",\n    \"data\": {\n        \"name\":\"{{g_name}}\",\n        \"salary\":\"{{g_salary}}\",\n        \"age\":\"{{g_age}}\",\n        \"id\":{{g_id}}\n    }\n}\n\n"
+				},
+				"url": {
+					"raw": "{{host1}}/v1/create",
+					"host": [
+						"{{host1}}"
+					],
+					"path": [
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Emp record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TC1: If emp record is successfully updated, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"test\",\n        \"salary\": \"1234\",\n        \"age\": \"23\",\n        \"id\": 25\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host1}}/v1/update/25",
+					"host": [
+						"{{host1}}"
+					],
+					"path": [
+						"v1",
+						"update",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TC1: If emp record is successfully deleted, TC is passed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host1}}/v1/delete/25",
+					"host": [
+						"{{host1}}"
+					],
+					"path": [
+						"v1",
+						"delete",
+						"25"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
